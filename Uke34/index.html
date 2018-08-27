@@ -3,47 +3,139 @@
 <html>
   <head>
 
-<title>Tittel på nettside</title>
+<title>WebUlis</title>
 <meta charset="utf-8">
 
 
 <style>
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+}
+
+nav p {
+  font-family: arial;
+  color: #222;
+  font-size: 24px;
+  line-height: 55px;
+  float: left;
+  padding: 0px 20px;
+}
+
+nav ul {
+  float: left;
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  font-family: arial;
+  color: #222;
+  font-size: 14px;
+  padding: 22px 14px;
+  text-decoration: none;
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 180px;
+  border-radius: 4px;
+}
+
+nav ul li ul li a {
+  padding: 8px 14px;
+}
+
+nav ul li ul li a:hover {
+  background-color: #f3f3f3;
+}
 
 
-  body{
-    background-color: red;
-    text-align: center;
-  }
+body{
+  background-color: rgb(225, 180, 20);
+  text-align: center;
+  color: white;
+}
 
-  h1 {
-    font-family: monospace;
-  }
+h1 {
+  font-family: monospace;
+}
 
-  img {
-    border-radius: 40px;
-  }
+img {
+  border-radius: 40px;
+}
 
+.img:hover {
+  width: 400;
+  height: 400;
+}
 </style>
 
 
 </head>
 
   <body>
-      <h1 style="color:yellow;">hallo</h1>
-      <a href="#contacts-header">Yo</a>
-<br>
+
+    <nav>
+      <p style="color: #FFCE33">WebUlis</p>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contacts*</a>
+          <ul>
+            <li><a href="#">Number</a></li>
+            <li><a href="index2.html">Number2</a></li>
+          </ul>
+        </li>
+        <li><a href="index3.html">Help</a></li>
+        <li><a href="#">Service</a></li>
+      </ul>
+
+
+    </nav>
+
+<pre>
+                                                                  k
+
+
+<h1><img class="img" src="Bilde.jpeg"width="10" height="10">WebUlis.com</h1>
+
+</pre>
+
+
 <form action="index2.html">
   Search window <input type="submit" value="Search">
   <input type="text" name="Query" value=""
 </br>
 </br>
-<img src="Bilde.jpeg" width="500" height="300">
+<a href="index2.html"><img src="Bilde.jpeg" alt="Yamaha R3" width="500" height="300"></a>
 
 <br>
 <a href="https://tv2.no" target="_blank" style="color:yellow;">link til tv2</a>
 </br>
-
+<a href="#contacts-header">Yo</a>
 <br>
   <a href="index2.html" target="_blank">Neste side</a>
 </br>
@@ -51,6 +143,50 @@
 <h1>Sommerferien</h1>
 <p>I sommerferien har jeg malt hytta og kjørt motorsykkel</p>
 
+<audio src="crowd_yelling_series.mp3"autoplay1 controls>
+
+</audio>
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
+
+<pre>
+<a href="index.html">1</a> <a href="index2.html">2</a> <a href="index3.html">3</a>
+</pre>
   <h2 id="contacts-header">Bottom page</h2>
 
 
