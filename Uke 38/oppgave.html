@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Plassere innhold på nettsiden</title>
+
+    <style media="screen">
+
+    header {
+      background-color: red;
+      text-align: center;
+      font-size: 20px;
+    }
+
+
+    main {
+      display: grid;
+      grid-template-columns: 3fr 2fr 1fr;
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+      background-color: white;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    main>article {
+      background-color: Blue;
+      padding: 30px;
+      color: white;
+    }
+
+    img {
+      height: 150px;
+      width: 100%;
+      background-color: grey;
+      border-style: solid;
+      border-width: 5px;
+      border-color: yellow;
+      margin-right: auto;
+    }
+
+    </style>
+
+
+  </head>
+  <body>
+    <header>
+      her er header
+      <pre>
+
+
+      </pre>
+    </header>
+    <br>
+    <main>
+      <article><a href="https://tv2.no">Element1</a></article>
+      <article><img src="https://www.enterprise.com/content/dam/global-vehicle-images/cars/TOYO_CAMR_2018.png"></article>
+      <article>Element3</article>
+      <article>Element4</article>
+      <article>Element4</article>
+      <article>Element5</article>
+      <article><img src="https://r.hswstatic.com/w_907/gif/mars-red.jpg"></article>
+      <article>Element7</article>
+      <article>Element8</article>
+    </main>
+  </body>
+</html>
