@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Øveprøve</title>
+
+  <style media="screen">
+
+  body {
+    background-color: gold;
+    text-align: center;
+  }
+
+  ul li {
+    background-color: white;
+    list-style: none;
+    float: left;
+    margin-left: 160px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    font-size: 20px;
+    margin-top: -25px;
+  }
+
+  p {
+    margin-left: 40px;
+    margin-bottom: -12px;
+    font-size: 21px;
+    color: black;
+    text-align: left;
+    font-weight: bold;
+    text-shadow: 2px 3px 0 darkslateblue;
+  }
+
+  img {
+    width: 300px;
+    margin-left: 120px;
+    margin-right: 0px;
+    border-radius: 5%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: blue;
+    box-shadow: 15px 15px 5px black;
+  }
+
+  img:active {
+    width: 200px;
+  }
+
+  table {
+    border-style: solid;
+    border-width: 2px;
+    border-color: green;
+    padding: 2px;
+    width: 40%;
+  }
+
+  tr {
+    text-align: left;
+    color: blue;
+  }
+  th {
+    margin: 20px;
+    color: green;
+  }
+
+  td {
+    background-color: orange;
+    border-style: solid;
+    border-width: 2px;
+  }
+
+  tbody {
+
+  }
+
+  form {
+    text-align: left;
+  }
+
+
+  #picture {
+    border-style: dashed;
+    border-color: grey;
+  }
+
+  .picture3 {
+    border-style: dotted;
+  }
+
+  .names {
+    font-family: monospace;
+    color: red;
+  }
+
+
+  </style>
+  </head>
+  <body>
+
+    <main>
+      <p>WebUlis</p>
+
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index2.html">Buisness</a></li>
+        <li><a href="index3.html">About</a></li>
+        <li><a href="index4.html">Contact</a></li>
+      </ul>
+
+      <br>
+      <a style="margin: 50px 0px 0px 50px; "href="https://tv2.no" target="_blank">tv2</a>
+      <pre>
+
+            NB!! I morgen: Jobbe med lyd og video element, tabeller og skjemaer (input)
+
+      </pre>
+      <br>
+      <img title="volcano" src="volcano.jpg" alt="vulkan">
+      <img id="picture" src="archspace.jpg" alt="arch">
+      <img class="picture3" src="forestandsky.jpg" alt="sky">
+
+      <pre>
+
+
+      </pre>
+
+      <audio src=""controls></audio>
+
+      <h1 style="text-align: left; color: red;">Best rappers:</h1>
+      <table> <!-- <table> er selve tabellen -->
+        <thead>
+        <tr> <!-- <tr> er en rad -->
+          <th>Rapper:</th>
+          <th>Album:</th>
+          <th>Song:</th> <!-- <th> er overskirft -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="names">Nas</td>
+          <td>Illmatic</td>
+          <td>Nas is like</td> <!-- <td> er vanlig innhold -->
+        </tr>
+
+        <tr>
+          <td class="names">MF DOOM</td>
+          <td>Madvillainy</td>
+          <td>Accordin</td>
+        </tr>
+
+        <tr>
+          <td class="names">Ghostface Killah</td>
+          <td>Ironman</td>
+          <td>260</td>
+        </tr>
+      </tbody>
+      </table>
+
+      <br>
+
+      <form action="index2.html">
+        <label>Søk</label>  <!-- hvis du vil skrive noe foran som hører til input-->
+        <input type="text" name="navn" placeholder="buisness"required>
+        <button type="submit">Søk</button>
+      </form>
+      <form action="index2.html">
+        <select name="Velg">
+          <option value="overskirft">velg land</option>
+          <option value="Norge">norge</option>
+        </select>
+      </form>
+
+
+      <input type="range">
+
+      <pre>
+
+
+
+        <form action="index3.html">
+          <label>Søk</label>
+          <input type="text">
+          <button type="submit">søk</button>
+        </form>
+
+
+
+
+
+k
+
+
+      </pre>
+
+
+    </main>
+  </body>
+</html>
