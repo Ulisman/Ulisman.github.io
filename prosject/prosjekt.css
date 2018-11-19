@@ -1,6 +1,6 @@
 
   body {
-    background-color: #D3D3D3;
+    background-color: rgb(236,230,230);
   }
 
   * {
@@ -88,4 +88,11 @@
     grid-column: span 3;
     grid-row: span 6;
     margin: 20px;
+  }
+
+  .grid-tekst {
+    padding-top: 0px;
+    text-align: center;
+    margin-top: -10px;
+    background-color: rgb(236,230,230);
   }
