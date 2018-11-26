@@ -110,6 +110,15 @@ img {
   margin-right: 20px;
 }
 
+.List > li {
+  position: relative;
+}
+
+.list > li > div {
+  position: absolute;
+  background-color: red;
+}
+
 </style>
 
 
@@ -119,8 +128,12 @@ img {
 
     <nav>
       <p style="color: #FFCE33">WebUlis</p>
-      <ul>
+      <ul class="list">
         <li><a href="#">Home</a></li>
+          <div>
+            <a href="#">link</a>
+            <a href="#">link</a>
+          </div>
         <li><a href="#">Contacts*</a>
           <ul>
             <li><a href="#">Number</a></li>
@@ -142,6 +155,8 @@ img {
 
 </pre>
 
+
+<a href="#contacts-header">contacts</a>
 
 <form action="index2.html">
   Search window <input type="submit" value="Search">

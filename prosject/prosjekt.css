@@ -121,7 +121,6 @@
   .navbar {
     position: fixed;
     top: 0;
-    overflow: hidden;
   }
 
   .dropdown {
@@ -145,7 +144,10 @@
     color: darkgrey;
   }
 
-
+  .hovedbilde {
+    margin-left: 130px;
+    margin-top: 20px;
+  }
 
 /*
   .pil {
