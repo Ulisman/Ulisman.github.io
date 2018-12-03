@@ -3,6 +3,16 @@
     background-color: rgb(236,230,230);
   }
 
+  h3 {
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 150px;
+  }
+
   * {
     margin: 0;
     padding: 0;
@@ -114,7 +124,7 @@
 
   .drip {
     width: 20px;
-    margin-left: -365px;
+    margin-left: -378px;
     margin-top: 13px;
   }
 
@@ -149,9 +159,16 @@
     margin-top: 20px;
   }
 
-/*
-  .pil {
-    width: 11px;
-    margin-left: 177px;
-    margin-bottom: 4px;
+  #contact {
+    margin-top: -167px;
   }
+
+  .usynlig {
+    opacity: 0;
+  }
+
+  .nike-logo {
+  
+  }
+
+.
