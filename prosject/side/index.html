@@ -2,12 +2,14 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="prosjekt.css">
     <title>DripClub</title>
-    <link rel="shortcut icon" href="bilder/driporange-1.png">
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+      <link rel="stylesheet" href="prosjekt.css">
+      <link rel="shortcut icon" href="bilder/driporange-1.png">
+      <link rel="stylesheet" href="footer.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="test.css">
+      
   </head>
   <body>
 
@@ -27,40 +29,76 @@
           <li><a href="shop.html">Shop</a></li>
           <li><a href="#contacts-header">Contact</a></li>
         </ul>
-  <!-- <img class="pil" src="pil.png" alt="pil"> -->
       </nav>
     </header>
-      <!--Må gjøre om størrelsen på bildene og kanskje avstanden mellom bildene og veggene -->
+
     <main>
       <article class="førstebilde"><img class="hovedbilde" src="bilder/forsidebilde.png" alt="hovedbilde"></article>
-      <article><a href="balenciaga.html"><img src="bilder/balenciaga.jpg" alt="jordans"></a></article>
-      <article><a href="jordancactus.html"><img src="bilder/jordanblue.jpg" alt="jordans"></a></article>
-      <article><a href="NA.html"><img src="bilder/jordaneminem.png" alt="jordans"></a></article>
+      <div class="container">
+        <img src="bilder/balenciaga.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text"><a href="balenciaga.html">Available</a></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="bilder/jordanblue.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text"><a href="jordancactus.html">Available</a></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="bilder/jordanem.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text"><a href="NA.html">Not Available</a></div>
+        </div>
+      </div>
+
       <div class="start">
-        <div class="grå">BALENCIAGA TRIPLE S</div>
+        <div class="grå"><a href="balenciaga.html">BALENCIAGA TRIPLE S</a></div>
         <div class="grå-skrift">Available</div>
       </div>
       <div class="start">
-        <div class="grå">AIR JORDAN 4 "CACTUS JACK"</div>
+        <div class="grå"><a href="jordancactus.html">AIR JORDAN 4 "CACTUS JACK"</a></div>
         <div class="grå-skrift">Available</div>
       </div>
       <div class="start">
-        <div class="grå">AIR JORDAN 4 "EMINEM"</div>
+        <div class="grå"><a href="NA.html">AIR JORDAN 4 "EMINEM"</a></div>
         <div class="grå-skrift">Not Available</div>
       </div>
-      <article><a href="NA.html"><img src="bilder/97sean.png" alt="97"></a></article>
-      <article><a href="NA.html"><img src="bilder/airmax95.png" alt="jordan"></a></article>
-      <article><a href="NA.html"><img src="bilder/offwhiteJ.png" alt="offwhite"></a></article>
+
+      <div class="container">
+        <img src="bilder/97sean.png" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text"><a href="NA.html">Not Available</a></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="bilder/airmax955.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text"><a href="NA.html">Not Available</a></div>
+        </div>
+      </div>
+
+      <div class="container">
+        <img src="bilder/offwhiteJ4.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+          <div class="text"><a href="NA.html">Not Available</a></div>
+        </div>
+      </div>
+
       <div class="start">
-        <div class="grå">AIRMAX 90/1 "WOOTHERSPOON"</div>
+        <div class="grå"><a href="NA.html">AIRMAX 90/1 "WOOTHERSPOON"</a></div>
         <div class="grå-skrift">Not Available</div>
       </div>
       <div class="start">
-        <div class="grå">AIRMAX 95</div>
+        <div class="grå"><a href="NA.html">AIRMAX 95</a></div>
         <div class="grå-skrift">Not Available</div>
       </div>
       <div class="start">
-        <div class="grå">RETRO JORDAN 1 "OFF WHITE"</div>
+        <div class="grå"><a href="NA.html">RETRO JORDAN 1 "OFF WHITE"</a></div>
         <div class="grå-skrift">Not Available</div>
         </div>
       </article>
@@ -78,8 +116,6 @@
       <a href="https://twitter.com/ComplexSneakers?lang=en" target="_blank" class="fa fa-twitter"></a>
 
     </footer>
-
-<!-- <article class="grid-tekst">RETRO JORDAN 1 "OFF WHITE"</article> -->
 
   </body>
 </html>
