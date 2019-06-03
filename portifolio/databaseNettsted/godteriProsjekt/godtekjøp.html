@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="godtekjøp.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="tilpasse.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB-Cat4DKHSv4weTgMULa0jbnES2cv_-vk",
+        authDomain: "godteriprosjekt.firebaseapp.com",
+        databaseURL: "https://godteriprosjekt.firebaseio.com",
+        projectId: "godteriprosjekt",
+        storageBucket: "",
+        messagingSenderId: "81752699291"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+
+    <header class="header">
+      <div id="nav_bar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li><a href="news.html">News</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li class="dropdown">
+            <a id="reflink" class="blockline">Contact Us</a>
+            <div class="dropborder">
+              <ul>
+                <li class="dropdown-content"><a id="mail" href="">Candy</a></li>
+                <li class="dropdown-content"><a id="skype" href="">Food</a></li>
+              </ul>
+            </div>
+          </li>
+          <form>
+            <input id="searchbox" type="text" placeholder="Search..." required><input id="searchbtn" type="button" value="Search">
+          </form>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+
+
+
+      <section id="secProduct" class="secProductGrid">
+
+      </section>
+
+
+
+    </main>
+
+    <script type="text/javascript">
+      //referanser til html elementer
+      const main = document.querySelector("main");
+      const secProduct = document.querySelector("#secProduct");
+
+      //koden som henter key fra forrige side
+      let url_string = window.location.href;
+      let url = new URL(url_string);
+      let id = url.searchParams.get("id");
+
+      //console.log(id);
+
+      //referanser til databasen
+      const db = firebase.database();
+      const godteri = db.ref("godteri");
+      const valgtGodteri = db.ref("godteri/" + id); //lager referanse til akkurat den valgte pokemonen
+
+      valgtGodteri.on("value",visGodteri);
+
+      function visGodteri(snap){
+        console.log(snap.val());
+        let key = snap.key;
+        let objekt = snap.val();
+        secProduct.innerHTML = `
+          <article>
+
+          <div>
+            <h1 class="cname">${objekt.Name}</h1>
+            <img class="kjopimage" src=${objekt.ImageURL}>
+            <p class="product-price">${objekt.Price}</p>
+
+
+
+            <div class="info">
+            <strong class="desc">${objekt.Description}</strong>
+            <p class="lorem">${objekt.Text}</p>
+            </div>
+
+        
+
+            <div class="link">
+            <a class="box" href="shop.html?id=${key}">Kjøp mer!</a>
+            </div>
+
+
+
+          </article>
+        `;
+      }
+
+
+
+
+
+
+
+      //handelkurv
+
+    /*  const CART = {
+        KEY: 'bkabkabka',
+        contents: [],
+        init(){
+          let _contents = localStorage.getItem(CART.KEY);
+            if (_contents){
+              CART.contents = JSON.parse(_contents);
+            }
+            else {
+              CART.sync();
+            }
+        }
+      } */
+
+
+
+
+
+
+/*
+      var removeCartItemButtons = document. queryGetElementByClassName('btn-danger')
+      for (var = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('click', function() {
+          var buttonClicked = event.target
+        })
+      } */
+
+    </script>
+
+    <footer>
+
+    </footer>
+
+  </body>
+</html>

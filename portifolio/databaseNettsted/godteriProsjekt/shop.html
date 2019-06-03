@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="tilpasse.css">
+
+
+
+    <!-- Husk å tilpasse nettsiden til IPHONE!!!! -->
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB-Cat4DKHSv4weTgMULa0jbnES2cv_-vk",
+        authDomain: "godteriprosjekt.firebaseapp.com",
+        databaseURL: "https://godteriprosjekt.firebaseio.com",
+        projectId: "godteriprosjekt",
+        storageBucket: "",
+        messagingSenderId: "81752699291"
+      };
+      firebase.initializeApp(config);
+    </script>
+  </head>
+  <body>
+
+    <header class="header">
+
+      <div id="nav_bar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li><a href="news.html">News</a></li>
+          <li class="dropdown">
+            <a id="reflink" class="blockline">Shop</a>
+            <div class="dropborder">
+              <ul>
+                <li class="dropdown-content"><a href="shop.html">Candy</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li><a href="Contact.html">Contact Us</a></li>
+          <form>
+            <input id="searchbox" type="text" placeholder="Search..." required><input id="searchbtn" type="button" value="Search">
+          </form>
+        </ul>
+      </div>
+    </header>
+
+
+    <img class="logo" src="GBilder/logo.png" alt="">
+
+    <main>
+
+
+      <section class="GridL " >
+
+        <div class="hoved">
+          <label class="checkb1"> Alternativer: </label>
+        </div>
+
+        <div class="hoved">
+          <label class="checkb1"> Chewy: </label>
+          <input type="checkbox" id="chbx" onchange="chewy()">
+        </div>
+
+        <div class="hoved">
+          <label class="checkb2"> Red: </label>
+          <input type="checkbox" id="red" >
+        </div>
+
+        <div class="hoved">
+          <label class="checkb3"> Solid: </label>
+          <input type="checkbox" id="solid" >
+        </div>
+
+        <div class="sisteDivList">
+          <label class="checkb4"> Chocolate: </label>
+          <input type="checkbox" id="choco" >
+
+        </div>
+
+      </section>
+
+
+
+
+
+      <section id="secGodteri" class="secShop">
+
+      </section>
+
+
+
+
+
+    </main>
+
+    <footer style="margin-top: 300px; margin-bottom: -100px;">
+
+      <div class="footer1">
+        <h1 <HTML><FONT COLOR="#FF0000">C</FONT><FONT COLOR="#FF8C00">a</FONT><FONT COLOR="#FFff00">n</FONT><FONT COLOR="#73ff00">d</FONT><FONT COLOR="#00ff00">y</FONT><FONT COLOR="#00ff8C"> </FONT><FONT COLOR="#00ffff">H</FONT><FONT COLOR="#008Cff">o</FONT><FONT COLOR="#0000ff">u</FONT><FONT COLOR="#7300ff">s</FONT><FONT COLOR="#FF00ff">e</FONT></HTML> </h1>
+
+        <p>Welcome to Candy House.</p>
+
+      </div>
+
+
+      <div style="" class="footer2">
+
+        <ul>
+          <li><a style="color: black;" href="shop.html">Shop</a></li>
+          <li><a style="color: black;" href="news.html">News</a></li>
+          <li><a style="color: black;" href="contact.html">Contact</a></li>
+        </ul>
+
+      </div>
+
+
+      <div class="footer3">
+        <p style="text-decoration:underline;">Info:</p>
+        <p>uisdahl@gmail.com</p>
+        <p>candyhousecontact@gmail.com</p>
+        <p>Copyright@claimed</p>
+      </div>
+
+    </footer>
+
+    <script type="text/javascript">
+     const main = document.querySelector("main"); // Variabel som referer til mian-elementet
+     const secGodteri = document.querySelector("#secGodteri"); // Variabel som referer til mian-elementet
+       // Referanser til databasen
+     const db = firebase.database();
+     const godteri = db.ref("godteri"); // Referer til alt som ligger under sko i databasen
+     const sjokolade = db.ref("sjokolade")
+
+     var checkbox = document.getElementById("chbx");
+
+
+
+     function visGodteri(snapshot){  //funksjonen som generer html kode for godteriet vårt
+           //Javascript-funksjon som skriver varene ut på nettsiden i section-element
+         let godteSnap = snapshot.val();
+         let key = snapshot.key; //legg til bildere sener i innerHTML
+         secGodteri.innerHTML +=`
+           <div class="GGrid">
+           <h1>${godteSnap.Name}</h1>
+           <img src="${godteSnap.ImageURL}" alt="">
+
+           <div class="GGrid2"><p>${godteSnap.Price} - ${godteSnap.Form}</p></div>
+           <div class="GGrid3"><a href="godtekjøp.html?id=${key}">Les mer</a></div>
+           </div>
+         `;
+     }
+
+     function visAlle(){
+       secGodteri.innerHTML = ``
+       godteri.on("child_added",visGodteri);
+     }
+
+     visAlle();
+     function visGreen(){
+       secGodteri.innerHTML = ``
+       candy.orderByChild("Farge").equalTo("Green").on("child_added",visCandy);
+       candy.orderByChild("Form").equalTo("Chewy").on("child_added",visCandy);
+     }
+
+
+     //function som viser alle solide godteriene
+     function visForm(){
+       secGodteri.innerHTML = ``
+       godteri.orderByChild("Form").equalTo("Solid").on("child_added",visGodteri);
+
+     }
+
+
+     //velger og fjerner det man spør etter
+
+
+    function chewy(){
+      if(checkbox.checked==true){
+          secGodteri.innerHTML = ""
+          godteri.orderByChild("Form").equalTo("Chewy").on("child_added",visGodteri);
+            }
+      else{
+           secGodteri.innerHTML = ""
+           visAlle();
+            }
+   };
+
+
+
+    const solidBox = document.querySelector('#solid');
+    solidBox.addEventListener('change', function(e){
+    if(solidBox.checked){
+      secGodteri.innerHTML = ""
+      godteri.orderByChild("Form").equalTo("Solid").on("child_added",visGodteri);
+    } else {
+      secGodteri.innerHTML = "";
+      visAlle();
+      //visAlle();
+    }
+    });
+
+   const redBox = document.querySelector('#red');
+   redBox.addEventListener('change', function(e){
+   if(redBox.checked){
+     secGodteri.innerHTML = ""
+     godteri.orderByChild("Farge").equalTo("Red").on("child_added",visGodteri);
+   } else {
+     secGodteri.innerHTML = ""
+     visAlle();
+   }
+   });
+
+
+
+   const chocoBox = document.querySelector('#choco');
+   chocoBox.addEventListener('change', function(e){
+   if(chocoBox.checked){
+     secGodteri.innerHTML = ""
+     godteri.orderByChild("Chocolate").equalTo("yes").on("child_added",visGodteri);
+   } else {
+     secGodteri.innerHTML = ""
+     visAlle();
+   }
+   });
+
+
+
+
+
+     //function for å legge til ekstra checks
+
+     /*function functionName() {
+       if (checkbox.checked && redBox.Checked == true) {
+         godteri.orderByChild("Form").equalTo("Chewy").on("child_added",visGodteri);
+         godteri.orderByChild("Farge").equalTo("Red").on("child_added",visGodteri);
+       }
+     }*/
+
+
+
+
+
+</script>
+
+
+
+    <footer>
+
+    </footer>
+
+  </body>
+</html>

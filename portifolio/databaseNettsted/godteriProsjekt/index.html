@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="tilpasse.css">
+
+
+<!-- Husk å tilpasse nettsiden til IPHONE!!!! -->
+
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB-Cat4DKHSv4weTgMULa0jbnES2cv_-vk",
+    authDomain: "godteriprosjekt.firebaseapp.com",
+    databaseURL: "https://godteriprosjekt.firebaseio.com",
+    projectId: "godteriprosjekt",
+    storageBucket: "",
+    messagingSenderId: "81752699291"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+  <body>
+    <header class="header">
+
+      <div id="nav_bar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li><a href="news.html">News</a></li>
+          <li class="dropdown">
+            <a id="reflink" class="blockline">Shop</a>
+            <div class="dropborder">
+              <ul>
+                <li class="dropdown-content"><a href="shop.html">Candy</a></li>
+
+              </ul>
+            </div>
+          </li>
+          <li><a href="Contact.html">Contact Us</a></li>
+          <form>
+            <input id="searchbox" type="text" placeholder="Search..." required><input id="searchbtn" type="button" value="Search">
+          </form>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+
+      <div class="slideshow-container">
+        <i class="fas fa-arrow-right" id="nextBtn"></i>
+        <i class="fas fa-arrow-left" id="prevBtn"></i>
+          <div class="slideshow-slide">
+            <img src="gbilder/forsidegodteri5.jpg" id="sisteBilde" alt="">
+            <img src="gbilder/forsidebilde.jpg" alt="">
+            <img src="gbilder/forsidegodteri1.jpg" alt="">
+            <img src="gbilder/forsidebilde2.jpg" alt="">
+            <img src="gbilder/forsidegodteri4.jpg" alt="">
+            <img src="gbilder/forsidegodteri5.jpg" alt="">
+            <img src="gbilder/forsidebilde.jpg" id="førsteBilde" alt="">
+          </div>
+      </div>
+
+
+      <div class="frontBtnDiv">
+      <button class="frontBtn1" onclick="visShop()" type="button">Candy</button>
+      <button class="frontBtn2" onclick="visNews()" type="button">News</button>
+      <button class="frontBtn3" onclick="visContact()" type="button">About</button>
+    </div>
+
+    <!-- av en eller annen grunn så går det ikke å få paddingen til å gå helt til høyre side på knappene, den på en måte "krasjer" -->
+
+
+
+      <h1 class="overskriftrecommended">Recommended</h1>
+
+      <!--
+      <form class="" name="myForm">
+        <select onchange="handleSelect()" class="" name="">
+          <option value="">1</option>
+          <option value="">3</option>
+          <option value="">2</option>
+        </select> -->
+
+      </form>
+
+
+      <section id="secGodteri" class="secGodteri">
+
+      </section>
+
+
+
+
+    </main>
+
+    <footer>
+
+      <div class="footer1">
+        <h1 <HTML><FONT COLOR="#FF0000">C</FONT><FONT COLOR="#FF8C00">a</FONT><FONT COLOR="#FFff00">n</FONT><FONT COLOR="#73ff00">d</FONT><FONT COLOR="#00ff00">y</FONT><FONT COLOR="#00ff8C"> </FONT><FONT COLOR="#00ffff">H</FONT><FONT COLOR="#008Cff">o</FONT><FONT COLOR="#0000ff">u</FONT><FONT COLOR="#7300ff">s</FONT><FONT COLOR="#FF00ff">e</FONT></HTML> </h1>
+
+        <p>Welcome to Candy House.</p>
+
+      </div>
+
+
+      <div style="" class="footer2">
+
+        <ul class="list2">
+          <li><a style="color: black;" href="shop.html">Shop</a></li>
+          <li><a style="color: black;" href="news.html">News</a></li>
+          <li><a style="color: black;" href="contact.html">Contact</a></li>
+        </ul>
+
+      </div>
+
+
+      <div class="footer3">
+        <p style="text-decoration:underline;">Info:</p>
+        <p>uisdahl@gmail.com</p>
+        <p>candyhousecontact@gmail.com</p>
+        <p>Copyright@claimed</p>
+      </div>
+
+    </footer>
+
+    <script type="text/javascript">
+
+      //slideshow:
+      const slideshowSlide = document.querySelector(".slideshow-slide"); //feil kan være ""
+      const slideshowBilder = document.querySelectorAll(".slideshow-slide img");
+
+      //buttons
+      const prevBtn = document.querySelector("#prevBtn");
+      const nextBtn = document.querySelector("#nextBtn");
+
+      //counter
+      let counter = 1;
+      const size = slideshowBilder[0].clientWidth;
+
+      slideshowSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+
+      //button følgere
+      nextBtn.addEventListener("click",()=>{  // function
+        if (counter >= slideshowBilder.length -1) return;
+        slideshowSlide.style.transition = "transform 0.4s ease-in-out";
+        counter++;
+        slideshowSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+      });
+
+      prevBtn.addEventListener("click",()=>{  // ()=>
+        if (counter <= 0) return;
+        slideshowSlide.style.transition = "transform 0.4s ease-in-out";
+        counter--;
+        slideshowSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+      });
+
+      slideshowSlide.addEventListener("transitionend", ()=>{
+        if(slideshowBilder[counter].id === "sisteBilde") {
+            slideshowSlide.style.transition = "none";
+            counter = slideshowBilder.length - 2 ;
+          slideshowSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+        }
+
+        if(slideshowBilder[counter].id === "førsteBilde") {
+            slideshowSlide.style.transition = "none";
+            counter = slideshowBilder.length - counter ;
+          slideshowSlide.style.transform = "translateX(" + (-size * counter) + "px)";
+        }
+      });
+
+
+
+
+
+
+           //json:
+            const main = document.querySelector("main"); // Variabel som referer til mian-elementet
+            const secGodteri = document.querySelector("#secGodteri"); // Variabel som referer til mian-elementet
+              // Referanser til databasen
+            const db = firebase.database();
+            const godteri = db.ref("godteri"); // Referer til alt som ligger under sko i databasen
+
+
+            function visGodteri(snapshot){  //funksjonen som generer html kode for pokemonen vår
+                  //Javascript-funksjon som skriver varene ut på nettsiden i main-elementet
+                let godteSnap = snapshot.val();
+                let key = snapshot.key; //legg til bildere sener i innerHTML
+                secGodteri.innerHTML +=`
+                  <div class="GGrid">
+                  <h1>${godteSnap.Name}</h1>
+                  <img src="${godteSnap.ImageURL}" alt="">
+
+
+                  <div class="GGrid2"><p>${godteSnap.Price} - ${godteSnap.Form}</p></div>
+                  <div class="GGrid3"><a href="godtekjøp.html?id=${key}">Les mer</a></div>
+                  </div>
+                `;
+            }
+
+          /**/
+           addEventListener("click",visFarge);
+
+            function visFarge(snapshot){
+                var selectBox = document.getElementById('Farge');
+                var userInput = selectBox.options[selectBox.selectedIndex].value;
+                  if (userInput =='Farge') {
+
+                  }
+            }
+
+            function visAlle(){
+              secGodteri.innerHTML = ``
+              godteri.limitToFirst(4).on("child_added",visGodteri);
+            }
+
+
+            visAlle();
+            function visGreen(){
+              secGodteri.innerHTML = ``
+
+            }
+
+
+            //buttons
+
+            function visShop(){
+              window.location.href="shop.html";
+              }
+
+            function visNews(){
+              window.location.href="news.html";
+              }
+
+            function visContact(){
+              window.location.href="contact.html";
+              }
+
+
+
+    </script>
+
+
+
+  </body>
+</html>

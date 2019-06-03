@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="tilpasse.css">
+
+
+<!-- Husk å tilpasse nettsiden til IPHONE!!!! -->
+
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB-Cat4DKHSv4weTgMULa0jbnES2cv_-vk",
+    authDomain: "godteriprosjekt.firebaseapp.com",
+    databaseURL: "https://godteriprosjekt.firebaseio.com",
+    projectId: "godteriprosjekt",
+    storageBucket: "",
+    messagingSenderId: "81752699291"
+  };
+  firebase.initializeApp(config);
+</script>
+  </head>
+  <header class="header">
+
+    <div id="nav_bar" class="navbar">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+
+        <li><a href="news.html">News</a></li>
+        <li class="dropdown">
+          <a id="reflink" class="blockline">Shop</a>
+          <div class="dropborder">
+            <ul>
+              <li class="dropdown-content"><a href="shop.html">Candy</a></li>
+
+            </ul>
+          </div>
+        </li>
+        <li><a href="Contact.html">Contact Us</a></li>
+        <form>
+          <input id="searchbox" type="text" placeholder="Search..." required><input id="searchbtn" type="button" value="Search">
+        </form>
+      </ul>
+    </div>
+  </header>
+
+  <body>
+
+    <main>
+
+      <div class="thing">
+        <button class="newsbtn1" onclick="visForm()">Older News</button>
+      </div>
+
+      <div class="visNew">
+        <button class="newsbtn2" onclick="visNew()">Newer News</button>
+      </div>
+
+
+
+      <section id="secGodteri" class="secShop">
+
+      </section>
+
+    </main>
+
+    <footer>
+
+      <div class="footer1">
+        <h1 <HTML><FONT COLOR="#FF0000">C</FONT><FONT COLOR="#FF8C00">a</FONT><FONT COLOR="#FFff00">n</FONT><FONT COLOR="#73ff00">d</FONT><FONT COLOR="#00ff00">y</FONT><FONT COLOR="#00ff8C"> </FONT><FONT COLOR="#00ffff">H</FONT><FONT COLOR="#008Cff">o</FONT><FONT COLOR="#0000ff">u</FONT><FONT COLOR="#7300ff">s</FONT><FONT COLOR="#FF00ff">e</FONT></HTML> </h1>
+
+        <p>Welcome to Candy House.</p>
+
+      </div>
+
+
+      <div style="" class="footer2">
+
+        <ul>
+          <li><a style="color: black;" href="shop.html">Shop</a></li>
+          <li><a style="color: black;" href="news.html">News</a></li>
+          <li><a style="color: black;" href="contact.html">Contact</a></li>
+        </ul>
+
+      </div>
+
+
+      <div class="footer3">
+        <p style="text-decoration:underline;">Info:</p>
+        <p>uisdahl@gmail.com</p>
+        <p>candyhousecontact@gmail.com</p>
+        <p>Copyright@claimed</p>
+      </div>
+
+    </footer>
+
+
+
+     <script type="text/javascript">
+
+
+
+    //gird
+
+    const main = document.querySelector("main"); // Variabel som referer til mian-elementet
+    const secGodteri = document.querySelector("#secGodteri"); // Variabel som referer til mian-elementet
+      // Referanser til databasen
+    const db = firebase.database();
+    const news = db.ref("news");
+    const godteri = db.ref("godteri"); // Referer til alt som ligger under godteri i databasen
+
+
+    var checkbox = document.getElementById("chbx");
+
+    function visNews(snapshot){  //funksjonen som generer html kode for godteriet vårt
+          //Javascript-funksjon som skriver varene ut på nettsiden i section-element
+        let newSnap = snapshot.val();
+        let key = snapshot.key; //legg til bildere sener i innerHTML
+        secGodteri.innerHTML +=`
+          <div class="GGrid">
+          <h1>${newSnap.Name}</h1>
+          <img src="${newSnap.ImageURL}" alt="">
+
+          <div class="hover-text"><p>${newSnap.When}</p></div>
+
+          <div style="opacity:0;" class="GGrid2"><p>${newSnap.Time}</p></div>
+          <div class="GGrid2"><p>${newSnap.Date}</p></div>
+
+
+          </div>
+
+          <p id="desc">${newSnap.Description}</p>
+          <p id="newsText">${newSnap.Text}</p>
+        `;
+    }
+
+    function visAlle(){
+      secGodteri.innerHTML = ``
+      news.orderByChild("Time").limitToFirst(3).on("child_added",visNews);
+    }
+
+    //viser i starten
+    visAlle();
+    function visGreen(){
+      secGodteri.innerHTML = ``
+      candy.orderByChild("Time").equalTo("New").on("child_added",visCandy);
+      candy.orderByChild("Date").equalTo("M&M").on("child_added",visCandy);
+    }
+
+    function visForm(){
+        secGodteri.innerHTML = ""
+        news.orderByChild("Time").equalTo("Old").limitToFirst(3).on("child_added",visNews);
+      }
+
+
+    function visNew(){
+        secGodteri.innerHTML = ""
+        news.orderByChild("Time").equalTo("New").limitToFirst(3).on("child_added",visNews);
+      }
+
+
+     </script>
+
+
+
+  </body>
+  </html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title></title>
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <ul>
+          <li><a class="home" style="list-style: none; text-decoration:none;" href="#">Home</a></li>
+        </ul>
+
+          <input class="input" type="text" name="" value="">
+
+      </nav>
+    </header>
+
+
+    <main>
+
+      <section style="margin-top: 1650px;" id="section1">
+
+        <nav>
+          <ul>
+            <li><a class="home" style="list-style: none; text-decoration:none;" href="#">Home</a></li>
+          </ul>
+
+          <div class="container">
+
+        <input class="container_toggle" type="checkbox" id="switch" name="mode">
+        <label for="switch">Toggle</label>
+    </div>
+
+
+            <input class="input" type="text" name="" value="">
+
+        </nav>
+
+      <div style="margin-top: 60px;">
+      <h1 style="margin-bottom: 10px;">Ulrik Isdahl web portifolio</h1>
+      <img style="border-radius:5%;" src="buisness.jpg" alt="">
+    </div>
+      </section>
+
+
+
+      <section id="section2">
+        <h3 style="margin-bottom: 30px; font-size: 21px;">Litt om meg</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2>Mine nettsider:</h2>
+      </section>
+
+      <section id="section3">
+        <a id="red" style="text-decoration:none;" href="databaseNettsted/godteriProsjekt/index.html">
+          <p>Godteri</p>
+        </a>
+
+        <a style="text-decoration:none;" href="datasikkerhetNettvett/nettvett-gruppeoppgave/index.html">
+          <p>Nettvett</p>
+        </a>
+
+        <a style="text-decoration:none;" href="digitalSamtid/digitalSamtid2/index.html">
+          <p >Digital Samtid</p>
+        </a>
+
+        <a  id="red"style="text-decoration:none;" href="multimedieNettsted/prosject/side/index.html">
+          <p>Høst Prosjekt</p>
+        </a>
+
+
+
+      </section>
+
+      <section>
+
+      </section>
+
+      <section>
+
+      </section>
+
+    </main>
+
+
+    <footer>
+      <h3>yeet</h3>
+    </footer>
+
+    <script type="text/javascript">
+
+      var checkbox = document.querySelector('input[name=mode]');
+
+        checkbox.addEventListener('change', function() {
+            if(this.checked) {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                trans()
+                document.documentElement.setAttribute('data-theme', 'light')
+            }
+        })
+
+        let trans = () => {
+            document.documentElement.classList.add('transition');
+            window.setTimeout(() => {
+                document.documentElement.classList.remove('transition');
+            }, 1000)
+        }
+
+
+
+        const bRed = document.querySelector('#red');
+        bRed.addEventListener('change', function(e){
+        if(this.checked){
+          trans()
+          document.documentElement.setAttribute('data-theme', 'dark');
+          bRed.style.backgroundColor = "black";
+        } else {
+          trans()
+          document.documentElement.setAttribute('data-theme', 'light');
+          bRed.style.backgroundColor = "white";
+        }
+        });
+
+    </script>
+
+  </body>
+</html>

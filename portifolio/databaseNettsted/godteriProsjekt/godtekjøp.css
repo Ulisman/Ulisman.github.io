@@ -1,0 +1,92 @@
+img {
+  width: 500px;
+  background-color: white;
+  margin-left: 10px;
+}
+
+main {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: space-between;
+ min-width: 100px;
+}
+
+.secProductGrid {
+  background-color: white;
+  padding: 50px;
+  padding-top: 1px;
+  margin: 50px;
+  margin-top: -50px;
+  flex: 1 1 80%;
+}
+
+
+
+/**/
+
+.product-price {
+  margin-bottom: 50px;
+  margin-left: 650px;
+  margin-top: -320px;
+  margin-bottom: 500px;
+  font-family: sans-serif;
+  font-size: 35px;
+}
+
+article {
+  margin-top: 100px;
+}
+
+.lorem {
+
+  width: 90%;
+
+}
+
+
+
+.info {
+  margin-top: -470px;
+  margin-left: 650px;
+  margin-bottom: 170px;
+  font-size: 19.5px;
+}
+
+.overskrift {
+  margin-left: 450px;
+  margin-bottom: -90px;
+}
+
+.desc {
+  font-size: 25px;
+}
+
+.cname {
+  font-size: 32px;
+  margin-left: 650px;
+  margin-bottom: 10px;
+}
+
+.link {
+margin-bottom: 100px;
+margin-left: 410px;
+margin-right: 410px;
+padding: 20px 30px 20px 30px;
+background-color: grey;
+text-align: center;
+font-size: 22px;
+border: solid 2px green;
+cursor: pointer;
+}
+
+.box {
+  padding-left: 131px;
+  padding-right: 131px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.link>* {
+  text-decoration: none;
+}

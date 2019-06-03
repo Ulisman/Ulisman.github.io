@@ -1,0 +1,166 @@
+{
+    "godteri":{
+      "G001":{
+        "Name": "Sourpatch kids",
+        "Farge": "Green",
+        "Form": "Chewy",
+        "Price": "$14.99",
+        "ImageURL": "GBilder/sourpatch.png",
+        "Text": "Maynards SourPatch kids are soft candy with coating of sugar. The candys slogan is Sour, Sweet, Gone. Reflecting that once the sour sugar has been dissolved by salvia, the taste of candy changes to a sweet one. When sour confectionery was first introduced it was considered a childrens fad, but later became mainstream. One of the driving forces behind the brands growth was its success in cinemas, and it became a staple for moviegoers in the United States.",
+        "Description": "Description:"
+      },
+      "G002":{
+        "Name": "LolliClaw",
+        "Farge": "Red",
+        "Form": "Solid",
+        "Price": "$9.99",
+        "ImageURL":"GBilder/lolliClaw.png",
+        "Text": "Maynards SourPatch kids are soft candy with coating of sugar. The candys slogan is Sour, Sweet, Gone. Reflecting that once the sour sugar has been dissolved by salvia, the taste of candy changes to a sweet one. When sour confectionery was first introduced it was considered a childrens fad, but later became mainstream. One of the driving forces behind the brands growth was its success in cinemas, and it became a staple for moviegoers in the United States.",
+        "Description": "Description:"
+      },
+      "G003":{
+        "Name": "Toxic Waste",
+        "Farge": "Multi",
+        "Form": "Solid",
+        "Price": "$11.00",
+        "ImageURL":"GBilder/ToxicWaste.png",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      },
+      "G004":{
+        "Name": "Jollyrancher",
+        "Farge": "Blue",
+        "Form": "Solid",
+        "Price": "$6.49",
+        "ImageURL":"GBilder/Jollyrancher.png",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      },
+      "G005":{
+        "Name": "Giant gummy bear",
+        "Farge": "Red",
+        "Form": "Chewy",
+        "Price": "$11.99",
+        "ImageURL":"GBilder/GiantGummy.png",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      },
+      "G006":{
+        "Name": "Gummy Bears",
+        "Farge": "Multi",
+        "Form": "Chewy",
+        "Price": "$14.99",
+        "ImageURL":"Gbilder/gummyBear.png",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      },
+      "G007":{
+        "Name": "Haribo",
+        "Farge": "Multi",
+        "Form": "Chewy",
+        "Price": "$17.89",
+        "ImageURL":"Gbilder/haribo.png",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      },
+      "G008":{
+        "Name": "Skittles",
+        "Farge": "Multi",
+        "Form": "Solid",
+        "Price": "$34.00",
+        "ImageURL":"Gbilder/skittles.png",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      },
+
+      "G009":{
+        "Name": "M&M",
+        "Farge": "Red",
+        "Form": "Chewy",
+        "Price": "$9.89",
+        "ImageURL":"GBilder/M&M.png",
+        "Chocolate": "yes",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      },
+      "G010":{
+        "Name": "M&M jared",
+        "Farge": "Multi",
+        "Form": "Chewy",
+        "Price": "$12.99",
+        "ImageURL":"GBilder/M&Mjar.png",
+        "Chocolate": "yes",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      },
+      "G011":{
+        "Name": "Hersheys",
+        "Farge": "Brown",
+        "Form": "Solid",
+        "Price": "$4.89",
+        "ImageURL":"GBilder/Hershey.png",
+        "Chocolate": "yes",
+        "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "Description": "Description:"
+      }
+    },
+
+    "news": {
+      "N001": {
+          "Name": "Bean Boozeld",
+          "Time": "New",
+          "Date": "26th August",
+          "ImageURL": "GBilder/Beans.png",
+          "Text": "Jelly Bellys Bean Boozled are soft candy with coating of sugar. The candys slogan is Sweet and Boozled. Reflecting that once the sour sugar has been dissolved by salvia, the taste of candy changes to a sweet one. When sour confectionery was first introduced it was considered a childrens fad, but later became mainstream. One of the driving forces behind the brands growth was its success in cinemas, and it became a staple for moviegoers in Germany.",
+          "Description": "Description:",
+          "When": "Coming"
+      },
+      "N002": {
+          "Name": "Scooby Doo Gummy",
+          "Time": "New",
+          "Date": "21st September",
+          "ImageURL": "GBilder/ScoobyDoo.png",
+          "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "Description": "Description:",
+          "When": "Coming"
+      },
+      "N003": {
+          "Name": "Ring Pop Gummys",
+          "Time": "New",
+          "Date": "2nd October",
+          "ImageURL": "GBilder/RingPop.png",
+          "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+          "Description": "Description:",
+          "When": "Coming"
+      },
+  			"N004": {
+  					"Name": "Swedish Fish",
+  					"Time": "Old",
+  					"Date": "27th Februay",
+  					"ImageURL": "GBilder/swedishFish.png",
+            "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Description": "Description:",
+            "When": "Arrived"
+  			},
+  			"N005": {
+  					"Name": "Dots",
+  					"Time": "Old",
+  					"Date": "26th Februay",
+  					"ImageURL": "GBilder/dots.png",
+            "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "Description": "Description:",
+            "When": "Arrived"
+  				},
+  			"N006": {
+  						"Name": "Giant Gummy Worm",
+  						"Time": "Old",
+  						"Date": "3rd January",
+  						"ImageURL": "GBilder/Worm.png",
+              "Text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+              "Description": "Description:",
+              "When": "Arrived"
+  				}
+
+  			}
+
+  		}
